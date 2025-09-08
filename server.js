@@ -48,7 +48,7 @@ app.get("/theme", (req, res) => {
     button: {
       textButtonPrimaryColor: "#32F20C",
       textButtonSecondaryColor: "#ffffff",
-      textButtonPrimaryFillColor: "#ffffff",
+      textButtonPrimaryFillColor: "#d1d5db",
       textButtonPrimaryBorderColor: "#111827",
       textButtonSecondaryFillColor: "#d1d5db",
       textButtonSecondaryBorderColor: "#ffffff",
