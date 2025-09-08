@@ -31,7 +31,7 @@ app.get("/theme", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.json({
     general: {
-      primary: "#2563eb",
+      primary: "#32F20C",
       secondary: "#64748b",
       background: "#ffffff",
       success: "#10b981",
