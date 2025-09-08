@@ -26,6 +26,41 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+// Theme endpoint with CORS
+app.get("/theme", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.json({
+    general: {
+      primary: "#2563eb",
+      secondary: "#64748b",
+      background: "#ffffff",
+      success: "#10b981",
+      error: "#ef4444",
+      clientLogo: "",
+    },
+    typography: {
+      fontFamily: "Inter",
+      textHeadingColor: "#111827",
+      textBodyColor: "#111827",
+      textSmallColor: "#6b7280",
+      textLinkColor: "#000000",
+    },
+    button: {
+      textButtonPrimaryColor: "#ffffff",
+      textButtonSecondaryColor: "#ffffff",
+      textButtonPrimaryFillColor: "#ffffff",
+      textButtonPrimaryBorderColor: "#ffffff",
+      textButtonSecondaryFillColor: "#ffffff",
+      textButtonSecondaryBorderColor: "#ffffff",
+    },
+    input: {
+      inputBackgroundColor: "#ffffff",
+      inputBorderColor: "#d1d5db",
+      inputTextColor: "#111827",
+    },
+  });
+});
+
 // Root endpoint
 app.get("/", (req, res) => {
   res.json({
@@ -33,6 +68,7 @@ app.get("/", (req, res) => {
     endpoints: [
       "GET /api/hello - Simple greeting endpoint",
       "GET /api/health - Health check endpoint",
+      "GET /theme - Theme configuration endpoint",
     ],
   });
 });
@@ -43,6 +79,7 @@ app.listen(PORT, () => {
   console.log(`📋 Available endpoints:`);
   console.log(`   GET http://localhost:${PORT}/api/hello`);
   console.log(`   GET http://localhost:${PORT}/api/health`);
+  console.log(`   GET http://localhost:${PORT}/theme`);
   console.log(`   GET http://localhost:${PORT}/`);
 });
 
