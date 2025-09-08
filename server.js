@@ -46,7 +46,7 @@ app.get("/theme", (req, res) => {
       textLinkColor: "#000000",
     },
     button: {
-      textButtonPrimaryColor: "#ffffff",
+      textButtonPrimaryColor: "#32F20C",
       textButtonSecondaryColor: "#ffffff",
       textButtonPrimaryFillColor: "#ffffff",
       textButtonPrimaryBorderColor: "#ffffff",
